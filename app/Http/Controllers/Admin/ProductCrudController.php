@@ -149,7 +149,6 @@ class ProductCrudController extends CrudController
      */
     protected function setupUpdateOperation()
     {   
-        
-        $this->setupCreateOperation();
+    $this->setupCreateOperation();
     }
 }
