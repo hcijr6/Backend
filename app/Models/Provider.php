@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Provider extends Model
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use HasFactory;
     public function products(){
         return $this->hasMany('App\Models\Product');
