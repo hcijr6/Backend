@@ -4,4 +4,4 @@
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('product') }}'><i class='nav-icon la la-question'></i> Products</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('provider') }}'><i class='nav-icon la la-question'></i> Providers</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('user') }}'><i class='nav-icon la la-question'></i> Users</a></li>
-<li class='nav-item'><a class='nav-link' href='{{ backpack_url('order_line') }}'><i class='nav-icon la la-question'></i> Order_lines</a></li>
+{{-- <li class='nav-item'><a class='nav-link' href='{{ route('orders') }}'><i class='nav-icon la la-question'></i> Order_lines</a></li> --}}

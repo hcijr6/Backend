@@ -18,7 +18,7 @@ class Order_lineCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
-
+    protected $id=0;
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
      * 
@@ -29,6 +29,7 @@ class Order_lineCrudController extends CrudController
         CRUD::setModel(\App\Models\Order_line::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/order_line');
         CRUD::setEntityNameStrings('order_line', 'order_lines');
+
     }
 
     /**
@@ -76,5 +77,9 @@ class Order_lineCrudController extends CrudController
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();
+    }
+    protected function idOrder($id){
+        $this->crud->addClause('where', 'order_id', '=', $id);
+        return $this->index();
     }
 }

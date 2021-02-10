@@ -29,6 +29,7 @@ class OrderCrudController extends CrudController
         CRUD::setModel(\App\Models\Order::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/order');
         CRUD::setEntityNameStrings('order', 'orders');
+        $this->crud->addButtonFromView('line', 'orderline', 'orderline', 'beginning');
     }
 
     /**
@@ -38,7 +39,8 @@ class OrderCrudController extends CrudController
      * @return void
      */
     protected function setupListOperation()
-    {
+    {   
+        
         $this->crud->addColumn([
             'name' => 'id', // The db column name
             'label' => "Id", // Table column heading
@@ -100,4 +102,6 @@ class OrderCrudController extends CrudController
     {
         $this->setupCreateOperation();
     }
+
+  
 }
