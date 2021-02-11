@@ -28,7 +28,7 @@ class ProductFactory extends Factory
             'price' => $this->faker->randomNumber(3),
             'stock' => $this->faker->randomNumber(3),
             'active' => $this->faker->boolean,
-            'photo' => 'url de la foto',
+            'photo' => 'url de foto',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];
